@@ -1,0 +1,7 @@
+*.tfvars
+*.state
+*.tfstate
+*.tfstate.backup
+*.tfplan
+*.out
+*.lock.hcl
