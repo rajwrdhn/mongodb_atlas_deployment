@@ -12,16 +12,9 @@ resource "mongodbatlas_cluster" "cluster" {
   project_id = mongodbatlas_project.project.id
   name       = var.cluster_name
   provider_name = "AWS"
-  num_shards    = 0
-  replication_specs {
-    num_shards = 0
-    regions_config {
-      region_name     = "EU_CENTRAL_1"
-      priority        = 0
-      electable_nodes = 0
-      read_only_nodes = 0
-      analytics_nodes = 0
-    }
-  }
+  auto_scaling_disk_gb_enabled = false
+  auto_scaling_compute_enabled = false
+  backup_enabled = false
+  provider_region_name = "EU_CENTRAL_1"
   provider_instance_size_name = "M0"
 }
