@@ -3,12 +3,12 @@ provider "mongodbatlas" {
   private_key = var.private_key
 }
 
-resource "mongodbatlas_project" "cluster" {
+resource "mongodbatlas_project" "project" {
   name   = var.project_name
   org_id = var.org_id
 }
 
-resource "mongodbatlas_cluster" "example" {
+resource "mongodbatlas_cluster" "cluster" {
   project_id = mongodbatlas_project.cluster.id
   name       = var.cluster_name
   provider_name = "AWS"

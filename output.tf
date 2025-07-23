@@ -1,6 +1,6 @@
 output "project_id" {
   description = "The ID of the MongoDB Atlas project."
-  value       = mongodbatlas_project.cluster.id
+  value       = mongodbatlas_project.project.id
 }
 
 output "cluster_name" {
