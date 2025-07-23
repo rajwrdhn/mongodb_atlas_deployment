@@ -9,7 +9,7 @@ resource "mongodbatlas_project" "project" {
 }
 
 resource "mongodbatlas_cluster" "cluster" {
-  project_id = mongodbatlas_project.cluster.id
+  project_id = mongodbatlas_project.project.id
   name       = var.cluster_name
   provider_name = "AWS"
   num_shards    = 0
