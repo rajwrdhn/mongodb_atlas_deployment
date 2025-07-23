@@ -5,3 +5,7 @@
 *.tfplan
 *.out
 *.lock.hcl
+*.terraform
+.terraform/
+.terraform.lock.hcl
+*terraform/providers/registry.terraform.io
