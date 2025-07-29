@@ -16,5 +16,5 @@ resource "mongodbatlas_cluster" "cluster" {
   auto_scaling_compute_enabled = false
   backup_enabled = false
   provider_region_name = "EU_CENTRAL_1"
-  provider_instance_size_name = "M0"
+  provider_instance_size_name = "M10"
 }
